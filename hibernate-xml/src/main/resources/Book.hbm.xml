@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.tyoma17.hibernate.xml.domain">
+	<class name="Book" table="BOOK">
+		<id name="id" column="ID">
+			<generator class="native"/>
+		</id>
+		<property name="isbn" type="string" column="ISBN"/>
+		<property name="name" type="string" column="NAME"/>
+		<many-to-one name="publisher" class="com.tyoma17.hibernate.xml.domain.Publisher"
+					 not-null="true" column="PUBLISHER_ID"/>
+		<bag name="chapters">
+			<key>
+				<column name="BOOK_ID"/>
+			</key>
+			<one-to-many class="com.tyoma17.hibernate.xml.domain.Chapter"/>
+		</bag>
+	</class>
+</hibernate-mapping>
+
+
+

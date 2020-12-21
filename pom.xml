@@ -9,6 +9,8 @@
 
     <modules>
         <module>jdbc</module>
+        <module>hibernate-xml</module>
+        <module>hibernate-annotations</module>
     </modules>
 
     <properties>
