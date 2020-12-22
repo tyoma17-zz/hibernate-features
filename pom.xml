@@ -11,6 +11,7 @@
         <module>jdbc</module>
         <module>hibernate-xml</module>
         <module>hibernate-annotations</module>
+        <module>transaction-class</module>
     </modules>
 
     <properties>
