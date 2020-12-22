@@ -4,7 +4,7 @@
 
     <groupId>com.tyoma17</groupId>
     <artifactId>hibernate-features</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -69,7 +69,7 @@
     <scm>
         <developerConnection>scm:git:https://github.com/tyoma17/hibernate-features.git</developerConnection>
         <url>https://github.com/tyoma17/hibernate-features</url>
-      <tag>HEAD</tag>
+      <tag>hibernate-features-0.0.2</tag>
   </scm>
 
     <build>
