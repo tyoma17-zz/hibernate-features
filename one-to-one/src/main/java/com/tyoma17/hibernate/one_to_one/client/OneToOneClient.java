@@ -1,14 +1,14 @@
-package com.tyoma17.hibernate.many_to_one.client;
+package com.tyoma17.hibernate.one_to_one.client;
 
-import com.tyoma17.hibernate.many_to_one.entity.Guide;
-import com.tyoma17.hibernate.many_to_one.entity.Student;
-import com.tyoma17.hibernate.many_to_one.util.HibernateUtil;
+import com.tyoma17.hibernate.one_to_one.entity.Customer;
+import com.tyoma17.hibernate.one_to_one.entity.Passport;
+import com.tyoma17.hibernate.one_to_one.util.HibernateUtil;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 @Log4j2
-public class ManyToOneClient {
+public class OneToOneClient {
 
     public static void main(String[] args) {
 
@@ -18,12 +18,10 @@ public class ManyToOneClient {
         try {
 
             txn.begin();
-            Guide guide = new Guide("2000MO10789", "Mike Lawson", 1000);
-            Student student = new Student("2014JT50123", "John Smith", guide);
-
-            session.save(guide);
-            session.save(student);
-
+            Passport passport = new Passport("925076473");
+            Customer customer = new Customer("Nicole Scott", passport);
+            log.info("Persisting a customer and one's passport");
+            session.persist(customer);
             txn.commit();
 
         } catch (Exception e) {
@@ -41,8 +39,8 @@ public class ManyToOneClient {
         }
 
         session = HibernateUtil.getSessionFactory().openSession();
-        Student student = session.get(Student.class, 1L);
+        Customer customer = session.get(Customer.class, 1L);
+        log.info("Customer: {}", customer);
         session.close();
-        log.info("Saved student: {}", student);
     }
 }

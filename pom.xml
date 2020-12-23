@@ -15,6 +15,10 @@
         <module>embeddable</module>
         <module>many-to-one</module>
         <module>hibernate-dependencies</module>
+        <module>cascade</module>
+        <module>one-to-many</module>
+        <module>orphan-removal</module>
+        <module>one-to-one</module>
     </modules>
 
     <properties>

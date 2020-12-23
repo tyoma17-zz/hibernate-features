@@ -8,5 +8,9 @@ Here I'm testing Hibernate features.
 - [Update VS merge](https://github.com/tyoma17/hibernate-features/blob/master/transaction-class/src/main/java/com/tyoma17/hibernate/transaction/client/EntityUpdateClient.java)
 - [Embeddable](https://github.com/tyoma17/hibernate-features/tree/master/embeddable)
 - [Many-to-One](https://github.com/tyoma17/hibernate-features/tree/master/many-to-one)
+- [Cascade](https://github.com/tyoma17/hibernate-features/tree/master/cascade)
+- [One-to-Many](https://github.com/tyoma17/hibernate-features/tree/master/one-to-many)
+- [orphanRemoval](https://github.com/tyoma17/hibernate-features/tree/master/orphan-removal)
+- [One-to-One](https://github.com/tyoma17/hibernate-features/tree/master/one-to-one)
 
 Some examples are taken from [this course](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).
