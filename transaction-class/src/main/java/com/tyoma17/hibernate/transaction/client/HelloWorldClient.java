@@ -11,24 +11,18 @@ import org.hibernate.Transaction;
 public class HelloWorldClient {
 
     public static void main(String[] args) {
-        saveMessage();
-        Message message = getMessage();
+        DbUtils.createMessageTable();
+        DbUtils.saveMessage();
+        Message message = DbUtils.getMessage();
         log.info("Saved message: {}", message);
 
         changeMessageTextWithinTransaction("Amended text 1", true);
-        message = getMessage();
+        message = DbUtils.getMessage();
         log.info("Message after failure during transaction: {}", message);
 
         changeMessageTextWithinTransaction("Amended text 2", false);
-        message = getMessage();
+        message = DbUtils.getMessage();
         log.info("Message after successful transaction: {}", message);
-    }
-
-    static Message getMessage() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Message message = session.get(Message.class, 1L);
-        session.close();
-        return message;
     }
 
     static void changeMessageTextWithinTransaction(String newText, boolean throwException) {
@@ -58,14 +52,5 @@ public class HelloWorldClient {
                 session.close();
             }
         }
-    }
-
-    static void saveMessage() {
-        DbUtils.createMessageTable();
-
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Message message = new Message("Hello, world!");
-        session.save(message);
-        session.close();
     }
 }

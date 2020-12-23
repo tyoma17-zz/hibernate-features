@@ -12,6 +12,9 @@
         <module>hibernate-xml</module>
         <module>hibernate-annotations</module>
         <module>transaction-class</module>
+        <module>embeddable</module>
+        <module>many-to-one</module>
+        <module>hibernate-dependencies</module>
     </modules>
 
     <properties>
@@ -154,7 +157,9 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.0.0-M2</version>
                 <executions>
                     <execution>
                         <id>enforce-env-requirements</id>

@@ -1,6 +1,8 @@
 package com.tyoma17.hibernate.transaction.util;
 
+import com.tyoma17.hibernate.transaction.domain.Message;
 import lombok.extern.log4j.Log4j2;
+import org.hibernate.Session;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,8 +21,28 @@ public final class DbUtils {
     //@formatter:on
 
     public static final String CONNECTION_URL = "jdbc:h2:mem:example;DB_CLOSE_DELAY=-1";
+    public static final String CONNECTION_URL_TEST = "jdbc:h2:mem:example";
 
     private DbUtils() {
+    }
+
+    public static Message getMessage() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Message message = session.get(Message.class, 1L);
+        session.close();
+        return message;
+    }
+
+    public static void saveMessage() {
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.getTransaction().begin();
+
+        Message message = new Message("Hello, world!");
+        session.save(message);
+
+        session.getTransaction().commit();
+        session.close();
     }
 
     public static void createMessageTable() {
@@ -35,16 +57,11 @@ public final class DbUtils {
         }
     }
 
-    // to avoid exceptions during tests
-    public static void setDbCloseDelay(int seconds) {
-        try (Connection connection = DriverManager.getConnection(CONNECTION_URL);
-             Statement statement = connection.createStatement()) {
-
-            statement.execute("SET DB_CLOSE_DELAY " + seconds);
-            log.debug("Set DB_CLOSE_DELAY to {}", seconds);
-        } catch (SQLException e) {
-            log.error(e);
-        }
+    public static void dropAllDbObjects() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.getTransaction().begin();
+        session.createSQLQuery("DROP ALL OBJECTS").executeUpdate();
+        session.getTransaction().commit();
+        session.close();
     }
-
 }
