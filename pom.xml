@@ -19,6 +19,11 @@
         <module>one-to-many</module>
         <module>orphan-removal</module>
         <module>one-to-one</module>
+        <module>maps-id</module>
+        <module>many-to-many</module>
+        <module>mapping-enums</module>
+        <module>value-types-collection</module>
+        <module>composite-key</module>
     </modules>
 
     <properties>

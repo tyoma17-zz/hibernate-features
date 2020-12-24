@@ -12,5 +12,10 @@ Here I'm testing Hibernate features.
 - [One-to-Many](https://github.com/tyoma17/hibernate-features/tree/master/one-to-many)
 - [orphanRemoval](https://github.com/tyoma17/hibernate-features/tree/master/orphan-removal)
 - [One-to-One](https://github.com/tyoma17/hibernate-features/tree/master/one-to-one)
+- [MapsId](https://github.com/tyoma17/hibernate-features/tree/master/maps-id)
+- [Many-to-Many](https://github.com/tyoma17/hibernate-features/tree/master/many-to-many)
+- [Mapping enums](https://github.com/tyoma17/hibernate-features/tree/master/mapping-enums)
+- [Collection of value types](https://github.com/tyoma17/hibernate-features/tree/master/value-types-collection)
+- [Composite key](https://github.com/tyoma17/hibernate-features/tree/master/composite-key)
 
 Some examples are taken from [this course](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).
