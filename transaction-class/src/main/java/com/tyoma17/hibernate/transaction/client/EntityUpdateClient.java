@@ -16,7 +16,8 @@ public class EntityUpdateClient {
 
         Session session = openSessionAndBeginTransaction();
         Message message = new Message("Hello, world!");
-        session.save(message);
+//        session.save(message); <-- will insert DB record immediately
+        session.persist(message); // <-- here or after transaction.commit()
         commitTransactionAndCloseSession(session);
 
         log.info("Trying to update message within closed session...");

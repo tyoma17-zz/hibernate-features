@@ -24,6 +24,7 @@
         <module>mapping-enums</module>
         <module>value-types-collection</module>
         <module>composite-key</module>
+        <module>entity-manager-vs-session</module>
     </modules>
 
     <properties>

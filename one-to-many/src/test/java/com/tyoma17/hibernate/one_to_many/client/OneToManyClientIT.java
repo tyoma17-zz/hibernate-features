@@ -2,16 +2,28 @@ package com.tyoma17.hibernate.one_to_many.client;
 
 import com.tyoma17.hibernate.one_to_many.entity.Guide;
 import com.tyoma17.hibernate.one_to_many.entity.Student;
+import com.tyoma17.hibernate.one_to_many.util.DbUtils;
 import com.tyoma17.hibernate.one_to_many.util.HibernateUtil;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 @Log4j2
 class OneToManyClientIT {
+
+    @AfterEach
+    void tearDown() {
+        try {
+            DbUtils.clearDatabase();
+        } catch (Exception e) {
+            fail(e.getMessage());
+        }
+    }
 
     @Test
     void updateOnOwnerSideAndInverseEnd() {
