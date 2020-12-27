@@ -19,6 +19,11 @@ Here I'm testing Hibernate features.
 - [Collection of value types](https://github.com/tyoma17/hibernate-features/tree/master/value-types-collection)
 - [Composite key](https://github.com/tyoma17/hibernate-features/tree/master/composite-key)
 - [First Level Cache](https://github.com/tyoma17/hibernate-features/blob/master/entity-manager-vs-session/src/main/java/com/tyoma17/hibernate/entity_manager/client/FirstLevelCacheClient.java)
-- [Lazy Loading](https://github.com/tyoma17/hibernate-features/tree/master/one-to-many/src/main/java/com/tyoma17/hibernate/entity_manager/client/FirstLevelCacheClient.java)
+- [Lazy Loading](https://github.com/tyoma17/hibernate-features/tree/master/one-to-many/src/main/java/com/tyoma17/hibernate/one_to_many/client/LazyLoadingClient.java)
+- [JPQL](https://github.com/tyoma17/hibernate-features/tree/master/jpql/src/main/java/com/tyoma17/hibernate/jpql/client/JpqlClient.java)
+- [Criteria API](https://github.com/tyoma17/hibernate-features/tree/master/jpql/src/main/java/com/tyoma17/hibernate/jpql/client/CriteriaApiClient.java)
+- [Inheritance](https://github.com/tyoma17/hibernate-features/tree/master/inheritance)
+- [N + 1 SELECTs Problem](https://github.com/tyoma17/hibernate-features/tree/master/jpql/src/main/java/com/tyoma17/hibernate/jpql/client/NPlus1SelectsProblemClient.java)
+- [Batch Fetching](https://github.com/tyoma17/hibernate-features/tree/master/batch-fetching)
 
 Some examples are taken from [this course](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).

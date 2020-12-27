@@ -25,6 +25,9 @@
         <module>value-types-collection</module>
         <module>composite-key</module>
         <module>entity-manager-vs-session</module>
+        <module>jpql</module>
+        <module>inheritance</module>
+        <module>batch-fetching</module>
     </modules>
 
     <properties>
