@@ -25,5 +25,7 @@ Here I'm testing Hibernate features.
 - [Inheritance](https://github.com/tyoma17/hibernate-features/tree/master/inheritance)
 - [N + 1 SELECTs Problem](https://github.com/tyoma17/hibernate-features/tree/master/jpql/src/main/java/com/tyoma17/hibernate/jpql/client/NPlus1SelectsProblemClient.java)
 - [Batch Fetching](https://github.com/tyoma17/hibernate-features/tree/master/batch-fetching)
+- [Merging Detached Objects](https://github.com/tyoma17/hibernate-features/tree/master/detached)
+- [Optimistic Locking](https://github.com/tyoma17/hibernate-features/tree/master/optimistic-locking)
 
-Some examples are taken from [this course](https://www.udemy.com/course/hibernate-and-jpa-fundamentals/).
+Some examples are taken from [this course](https://www.youtube.com/watch?v=LKidsEzqwXw&list=PLgzDdh90-m_TKIz4JNuqh3QarIdKiTS3q&ab_channel=JavaWorld).

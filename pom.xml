@@ -28,6 +28,8 @@
         <module>jpql</module>
         <module>inheritance</module>
         <module>batch-fetching</module>
+        <module>detached</module>
+        <module>optimistic-locking</module>
     </modules>
 
     <properties>

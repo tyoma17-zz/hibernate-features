@@ -1,0 +1,38 @@
+Configuration:
+  status: warn
+
+  appenders:
+    Console:
+      name: Console
+      PatternLayout:
+        Pattern: "%d{HH:mm:ss.SSS} %-5level [%t] %c{1.} %highlight{%m} \n"
+        disableAnsi: false
+
+  Loggers:
+    logger:
+      - name: com.tyoma17
+        level: debug
+        additivity: false
+        AppenderRef:
+          ref: Console
+      - name: org.hibernate.SQL
+        level: DEBUG
+        additivity: false
+        AppenderRef:
+          ref: Console
+      - name: org.hibernate.type.descriptor.sql.BasicBinder
+        level: TRACE
+        additivity: false
+        AppenderRef:
+          ref: Console
+#     hibernate statistics
+#      - name: org.hibernate.engine.internal.StatisticalLoggingSessionEventListener
+#        level: INFO
+#        additivity: false
+#        AppenderRef:
+#          ref: Console
+
+    Root:
+      level: error
+      AppenderRef:
+        ref: Console
