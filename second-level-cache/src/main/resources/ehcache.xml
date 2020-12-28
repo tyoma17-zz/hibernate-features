@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd">
+
+
+    <cache name="com.tyoma17.hibernate.second_level_cache.entity.Guide"
+           maxElementsInMemory="1000"
+           eternal="true"
+           overflowToDisk="false"
+    />
+
+    <cache name="com.tyoma17.hibernate.second_level_cache.entity.Student"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="false"
+    />
+
+    <cache name="com.tyoma17.hibernate.second_level_cache.entity.Guide.students"
+           maxElementsInMemory="1000"
+           eternal="true"
+           overflowToDisk="false"
+    />
+
+</ehcache>

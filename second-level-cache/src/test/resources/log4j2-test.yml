@@ -1,0 +1,22 @@
+Configuration:
+  status: warn
+
+  appenders:
+    Console:
+      name: Console
+      PatternLayout:
+        Pattern: "%d{HH:mm:ss.SSS} %-5level [%t] %c{1.} %highlight{%m} \n"
+        disableAnsi: false
+
+  Loggers:
+    logger:
+      - name: com.tyoma17
+        level: info
+        additivity: false
+        AppenderRef:
+          ref: Console
+
+    Root:
+      level: error
+      AppenderRef:
+        ref: Console
