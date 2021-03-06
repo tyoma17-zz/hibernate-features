@@ -28,5 +28,7 @@ Here I'm testing Hibernate features.
 - [Batch Fetching](https://github.com/tyoma17/hibernate-features/tree/master/batch-fetching)
 - [Merging Detached Objects](https://github.com/tyoma17/hibernate-features/tree/master/detached)
 - [Optimistic Locking](https://github.com/tyoma17/hibernate-features/tree/master/optimistic-locking)
+- [Entity Graph](https://github.com/tyoma17/hibernate-features/tree/master/entity-graph/src/test/java/com/tyoma17/hibernate/entity_graph)
+- [Query Hints](https://github.com/tyoma17/hibernate-features/blob/master/query-hints/src/test/java/com/tyoma17/hibernate/query_hints/QueryHintsTest.java)
 
 Some examples are taken from [this course](https://www.youtube.com/watch?v=LKidsEzqwXw&list=PLgzDdh90-m_TKIz4JNuqh3QarIdKiTS3q&ab_channel=JavaWorld).

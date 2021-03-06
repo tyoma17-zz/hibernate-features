@@ -90,7 +90,7 @@ public final class DbUtils {
         }
 
         // Idem for sequences
-        Set<String> sequences = new HashSet<String>();
+        Set<String> sequences = new HashSet<>();
         rs = s.executeQuery("SELECT SEQUENCE_NAME FROM INFORMATION_SCHEMA.SEQUENCES WHERE SEQUENCE_SCHEMA='PUBLIC'");
         while (rs.next()) {
             sequences.add(rs.getString(1));

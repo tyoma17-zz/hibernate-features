@@ -31,6 +31,8 @@
         <module>detached</module>
         <module>optimistic-locking</module>
         <module>second-level-cache</module>
+        <module>query-hints</module>
+        <module>entity-graph</module>
     </modules>
 
     <properties>
